@@ -1878,7 +1878,7 @@ function process_addRadialGradientBrushAction(action) {
 	// Iterate through all the asset actions...
 	actionset.Items.forEach(function (action) {
 
-		console.log("action.Id = " + action.Id);
+		//console.log("action.Id = " + action.Id);
 
 		switch (action.Id) {
 
