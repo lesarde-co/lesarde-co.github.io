@@ -1,0 +1,72 @@
+<!doctype html>
+
+<!--
+
+	index.html file
+
+	Copyright � 2018 Lesarde Inc. All rights reserved.
+
+	Interops with the wasm build. The interop-win.js is used to interact with .NET framework builds.
+
+	This file is preprocessed (see %% macros).
+-->
+
+<html lang="en-us">
+<head>
+	<!--
+		<link href="bootstrap.min.css" rel="stylesheet" />
+	-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="frogui.css">
+	<script src="jquery-3.3.1.min.js"></script>
+</head>
+<body style="font-family:'Lucida Console';font-size:small">
+
+	<!--
+		<script src="bootstrap-native.min.js"></script>
+	-->
+
+	<svg id="e_svg" width="0" height="0" style="float:left">
+		<defs id="e_svgDefs">
+		</defs>
+	</svg>
+
+	<!-- Show Loading Spinner -->
+	<p id="e_loading">
+		<i class="fa fa-refresh fa-spin" style="font-size:12px;margin-right:0.5em;">
+		</i>
+		Loading...
+	</p>
+
+	<!-- e_rootHost
+		class = grid : aligns for children to be aligned horz and vert
+		width & height: stretch to fill screen.
+	-->
+	<div id="e_rootHost" class="grid" style="width:100vw; height:100vh">
+	</div>
+
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function (event) {
+			doDomContentLoaded();
+		});
+	</script>
+
+	<!--
+		Use 'defer' (not 'async') below so the scripts load synchronously.
+		Note: they are loaded in dependency order, where first, is least dependent, etc.
+	-->
+	<script defer type="text/javascript" src="frogui.js"></script>
+	<script defer type='text/javascript' src='interop-wasm.js'></script>
+<script defer type='text/javascript' src='mono.js'></script>
+
+</body>
+</html>
+
+<!--
+		<svg id="e_svg" width="0" height="0" viewBox="0 0 0 0" style="float:left">
+		<defs id="e_svgDefs">
+		</defs>
+	</svg>
+
+
+-->
