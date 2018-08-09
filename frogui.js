@@ -117,17 +117,6 @@ class TextChangeRelayEventArgs {
 }
 
 /*******************************************************************************
-	prepareDomForUse()
-*******************************************************************************/
-
-/* public */ function prepareDomForUse() {
-
-	// Find the e_loading element and hide it
-	var e_loading = document.getElementById("e_loading");
-	e_loading.hidden = true;
-}
-
-/*******************************************************************************
 	b64toBlob()
 
 	Convert a base-64 encoded string to a blob.
@@ -1865,7 +1854,7 @@ function process_addRadialGradientBrushAction(action) {
 /* public */ function application_applyAssetActionset(actionQueueId, actionsetPosition, actionsetJson) {
 
 	//console.log("application_applyAssetActionset(" + actionQueueId + ", " + actionsetPosition + ", " + actionsetJson + ")");
-	console.log("application_applyAssetActionset(" + actionQueueId + ", " + actionsetPosition + ", actionsetJson)");
+	//console.log("application_applyAssetActionset(" + actionQueueId + ", " + actionsetPosition + ", actionsetJson)");
 
 	try {
 		// Deserialize the json into an actionset object

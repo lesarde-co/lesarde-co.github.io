@@ -55,9 +55,10 @@
 		Use 'defer' (not 'async') below so the scripts load synchronously.
 		Note: they are loaded in dependency order, where first, is least dependent, etc.
 	-->
-	<script defer type="text/javascript" src="frogui.js"></script>
+	<script defer type="text/javascript" src="frogui-base.js"></script>
 	<script defer type='text/javascript' src='interop-wasm.js'></script>
-<script defer type='text/javascript' src='mono.js'></script>
+	<script defer type='text/javascript' src='mono.js'></script>
+	<script defer type="text/javascript" src="frogui.js"></script>
 
 </body>
 </html>
