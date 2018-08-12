@@ -347,7 +347,9 @@ var Wormhole = {
 	//},
 	relayEvent: function (eid, eventName, argsJson) {
 
-		MonoRuntime.call_method(this.relayEvent_method, null, [MonoRuntime.mono_string(eid), MonoRuntime.mono_string(eventName), MonoRuntime.mono_string(argsJson)]);
+		// 2018.8.12 Check necessary since apparently how we load scripts is not ideal
+		if (MonoRuntime.mono_string)
+			MonoRuntime.call_method(this.relayEvent_method, null, [MonoRuntime.mono_string(eid), MonoRuntime.mono_string(eventName), MonoRuntime.mono_string(argsJson)]);
 	},
 
 	/***********************************************************
